@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+</head>
+<body>
+    <h1>Speech to Text</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="audio_file">Upload Audio File:</label>
+        <input type="file" name="audio_file" id="audio_file"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="use_microphone">Use Microphone</button>
+    </form>
+</body>
+</html>
